@@ -6,29 +6,30 @@
  * Time: 13:08
  */
 
+App::uses('AppModel', 'Model');
 App::uses('AppController', 'Controller');
 
 class EstacionamentosController extends AppController {
     public  $name = 'Estacionamentos';
 
-    public function criaArrayCarro(){
-        for($i = 0; $i < 500; $i++){
-            $carros[] = $i;
-        }
-        return $carros;
+    public function cleanBase(){
+        $this->Estacionamento->query("TRUNCATE estacionamentos");
     }
 
     public function getVagasDisponiveis(){
-        return count($this->criaArrayCarro());
+        return $this->Estacionamento->find('count');
     }
 
-    public function entraCarro(){
-        $arrayCarro = $this->criaArrayCarro();
-        return array_pop($arrayCarro);
+    public function entraCarro($placa){
+        if($this->Estacionamento->find('first', array('conditions' => array('Estacionamento.placa' => $placa)))) throw new Exception();
+        if($this->getVagasDisponiveis() == 2) throw new NotFoundException();
+        $this->Estacionamento->save(array("placa" => $placa));
+        return $this->getVagasDisponiveis();
     }
 
-    public function saiCarro(){
-        $arrayCarro = $this->criaArrayCarro();
-        return count($arrayCarro);
+    public function saiCarro($placa){
+        if(!$this->Estacionamento->find('first', array('conditions' => array('Estacionamento.placa' => $placa)))) throw new Exception();
+        $this->Estacionamento->deleteAll(array('Estacionamento.placa' => $placa));
+        return $this->getVagasDisponiveis();
     }
 } 

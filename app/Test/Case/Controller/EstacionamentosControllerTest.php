@@ -7,39 +7,51 @@
  */
 
 App::uses('AppController', 'Controller');
-App::uses('Controller','EstacionamentosController');
 App::uses('EstacionamentosController','Controller');
 
 class EstacionamentosControllerTest extends ControllerTestCase {
 
-    public function setUp(){
-        ControllerTestCase::setUp();
+    /**
+     * @beforeClass
+     */
+    public static function setUpBeforeClass(){
+        $VAGAS_DISPONIVEIS = 2;
     }
 
-    /*
-     * Deve ter 500 vagas disponíveis
-     * */
     public function testGetVagasDisponiveis(){
         $Estacionamentos = new EstacionamentosController();
-        $this->assertEquals(500,$Estacionamentos->getVagasDisponiveis());
+        $this->assertEquals(2,$Estacionamentos->getVagasDisponiveis());
     }
 
-    /*
-     * Deve entrar um carro
-     * */
+    /**
+     * @expectedException Exception
+     */
     public function testEntraCarro(){
         $Estacionamentos = new EstacionamentosController();
-        $this->assertEquals(499,$Estacionamentos->entraCarro());
+        $Estacionamentos->entraCarro("AAA-9996");
     }
 
-    /*
-     * Deve sair um carro
-     * */
     public function testSaiCarro(){
         $Estacionamentos = new EstacionamentosController();
-        $this->assertEquals(499,$Estacionamentos->entraCarro());
-        $this->assertEquals(500,$Estacionamentos->saiCarro());
+        $Estacionamentos->entraCarro("AAA-9999");
+        $Estacionamentos->saiCarro('AAA-9999');
+    }
 
+    /**
+     * @expectedException Exception
+     */
+    public function testNaoPodeEntrarCarroDuplicado(){
+        $Estacionamento = new EstacionamentosController();
+        $Estacionamento->entraCarro("BBB-7777");
+        $Estacionamento->entraCarro("BBB-7777");
+    }
+
+    /**
+     * @expectedException Exception
+     */
+    public function testeEstacionamentoLotado(){
+        $Estacionamento = new EstacionamentosController();
+        $Estacionamento->entraCarro("ABA-1010");
     }
 }
  

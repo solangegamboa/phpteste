@@ -1014,3 +1014,66 @@ Stack Trace:
 #3 C:\xampp\htdocs\phpteste\lib\Cake\Core\App.php(904): App::_checkFatalError()
 #4 [internal function]: App::shutdown()
 #5 {main}
+2014-09-28 20:48:49 Error: Fatal Error (1): Call to undefined method EstacionamentosController::criaArrayCarro() in [C:\xampp\htdocs\phpteste\app\Controller\EstacionamentosController.php, line 19]
+2014-09-28 20:48:49 Error: [FatalErrorException] Call to undefined method EstacionamentosController::criaArrayCarro()
+Request URL: /phpteste/estacionamentos/getVagasDisponiveis
+Stack Trace:
+#0 C:\xampp\htdocs\phpteste\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 19)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 19, Array)
+#2 C:\xampp\htdocs\phpteste\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 19, Array)
+#3 C:\xampp\htdocs\phpteste\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-28 21:11:57 Error: [NotFoundException] Not Found
+Request URL: /phpteste/estacionamentos/getVagasDisponiveis
+Stack Trace:
+#0 [internal function]: EstacionamentosController->entraCarro()
+#1 C:\xampp\htdocs\phpteste\lib\Cake\Controller\Controller.php(490): ReflectionMethod->invokeArgs(Object(EstacionamentosController), Array)
+#2 C:\xampp\htdocs\phpteste\lib\Cake\Routing\Dispatcher.php(191): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\htdocs\phpteste\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(EstacionamentosController), Object(CakeRequest))
+#4 C:\xampp\htdocs\phpteste\lib\Cake\Core\Object.php(106): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse), Array)
+#5 C:\xampp\htdocs\phpteste\app\View\Estacionamentos\get_vagas_disponiveis.ctp(8): Object->requestAction('estacionamentos...')
+#6 C:\xampp\htdocs\phpteste\lib\Cake\View\View.php(948): include('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\phpteste\lib\Cake\View\View.php(910): View->_evaluate('C:\\xampp\\htdocs...', Array)
+#8 C:\xampp\htdocs\phpteste\lib\Cake\View\View.php(471): View->_render('C:\\xampp\\htdocs...')
+#9 C:\xampp\htdocs\phpteste\lib\Cake\Controller\Controller.php(954): View->render(NULL, NULL)
+#10 C:\xampp\htdocs\phpteste\lib\Cake\Routing\Dispatcher.php(198): Controller->render()
+#11 C:\xampp\htdocs\phpteste\lib\Cake\Routing\Dispatcher.php(165): Dispatcher->_invoke(Object(EstacionamentosController), Object(CakeRequest))
+#12 C:\xampp\htdocs\phpteste\app\webroot\index.php(108): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2014-09-28 21:34:15 Error: Fatal Error (1): Call to undefined method EstacionamentosController::element() in [C:\xampp\htdocs\phpteste\app\Controller\EstacionamentosController.php, line 22]
+2014-09-28 21:34:15 Error: [FatalErrorException] Call to undefined method EstacionamentosController::element()
+Stack Trace:
+#0 C:\xampp\htdocs\phpteste\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 22)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 22, Array)
+#2 C:\xampp\htdocs\phpteste\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', 'C:\\xampp\\htdocs...', 22, Array)
+#3 C:\xampp\htdocs\phpteste\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-28 22:08:19 Error: Fatal Error (1): Class 'EstacionamentosController' not found in [C:\xampp\htdocs\phpteste\app\Test\Case\Controller\EstacionamentosControllerTest.php, line 21]
+2014-09-28 22:08:19 Error: [FatalErrorException] Class 'EstacionamentosController' not found
+Stack Trace:
+#0 C:\xampp\htdocs\phpteste\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'Estacion...', 'C:\\xampp\\htdocs...', 21)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Estacion...', 'C:\\xampp\\htdocs...', 21, Array)
+#2 C:\xampp\htdocs\phpteste\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'Estacion...', 'C:\\xampp\\htdocs...', 21, Array)
+#3 C:\xampp\htdocs\phpteste\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-28 22:08:30 Error: Fatal Error (1): Class 'EstacionamentosController' not found in [C:\xampp\htdocs\phpteste\app\Test\Case\Controller\EstacionamentosControllerTest.php, line 21]
+2014-09-28 22:08:30 Error: [FatalErrorException] Class 'EstacionamentosController' not found
+Stack Trace:
+#0 C:\xampp\htdocs\phpteste\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'Estacion...', 'C:\\xampp\\htdocs...', 21)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Estacion...', 'C:\\xampp\\htdocs...', 21, Array)
+#2 C:\xampp\htdocs\phpteste\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'Estacion...', 'C:\\xampp\\htdocs...', 21, Array)
+#3 C:\xampp\htdocs\phpteste\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2014-09-28 22:08:42 Error: Fatal Error (1): Class 'EstacionamentosController' not found in [C:\xampp\htdocs\phpteste\app\Test\Case\Controller\EstacionamentosControllerTest.php, line 22]
+2014-09-28 22:08:42 Error: [FatalErrorException] Class 'EstacionamentosController' not found
+Stack Trace:
+#0 C:\xampp\htdocs\phpteste\lib\Cake\Error\ErrorHandler.php(203): ErrorHandler::handleFatalError(1, 'Class 'Estacion...', 'C:\\xampp\\htdocs...', 22)
+#1 [internal function]: ErrorHandler::handleError(1, 'Class 'Estacion...', 'C:\\xampp\\htdocs...', 22, Array)
+#2 C:\xampp\htdocs\phpteste\lib\Cake\Core\App.php(931): call_user_func('ErrorHandler::h...', 1, 'Class 'Estacion...', 'C:\\xampp\\htdocs...', 22, Array)
+#3 C:\xampp\htdocs\phpteste\lib\Cake\Core\App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
