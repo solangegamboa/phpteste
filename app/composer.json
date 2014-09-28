@@ -19,9 +19,7 @@
 	},
 	"require": {
 		"php": ">=5.2.8",
-		"ext-mcrypt": "*",
-        "cakephp/debug_kit": "2.2.*",
-        "phpunit/phpunit": "*"
+		"ext-mcrypt": "*"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "3.7.*",
@@ -30,4 +28,6 @@
 	"bin": [
 		"lib/Cake/Console/cake"
 	]
+
 }
+
